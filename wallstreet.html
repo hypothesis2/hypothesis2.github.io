@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adjustable Background with Clickable Overlay Image</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  #background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  #background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #overlay-link {
+    position: absolute;
+    top: 30%; /* Adjusted to center vertically */
+    left: 60%; /* Adjusted to center horizontally */
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+}
+</style>
+</head>
+<body>
+  <div id="background-container">
+    <img id="background" src="img/wallstreet.gif" alt="Background GIF">
+  </div>
+  <a id="overlay-link" onclick="window.open('/tetris-in-the-wall-street.html','',' width=480, height =640, left=400, top=300')">
+    <img id="overlay-link" src="img/wallstreet.png" alt="Overlay Image">
+  </a>
+</body>
+</html>
